@@ -7,14 +7,14 @@
 
 def readfile():
 	
-    # Using the 'assert' method. The word 'ansible' will throw a built-in AssertionError.
-    # To test the assert() method with 'in'. We make a 'list' with string literal's for testing assert().
-    # The assert() method resulting in an AssertionError and HALTS the program; it does not continue. 
+    # The 'assert' statement is used for debugging code . The word 'ansible' will throw a built-in AssertionError.
+    # The assert statement 'in'. We make a 'list' with string literal's for testing assert.
+    # The assert statement results in an AssertionError and HALTS the program; it does not continue. 
     # Not a good approach if you want the program to continue!
 	
     # The list	
     test_list = ['python', 'apple', 'linux', 'cisco']
-    # The assert()method
+    # The assert statement used to test if the string 'ansible' is in the test_list.
     assert( 'ansible' in test_list), 'Ansible is not in the list'
 	
     # A try and except block: used to catch and handle exceptions.
