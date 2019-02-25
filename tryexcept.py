@@ -2,16 +2,31 @@
 
 
 # Define a function that uses python built-in exceptions.
-# The file is on a windows PC, therefore the need for double backslashes ( \\ ) 
+# The file text file is located on a Windows PC, therefore the need for double backslashes ( \\ ) 
 
 
 def readfile():
-    
+	
+    # Using the 'assert' method. The word 'ansible' will throw a built-in AssertionError.
+    # To test the assert() method with 'in'. We make a 'list' with string literal's for testing assert().
+    # The assert() method resulting in an AssertionError and HALTS the program; it does not continue. 
+    # Not a good approach if you want the program to continue!
+	
+    # The list	
+    test_list = ['python', 'apple', 'linux', 'cisco']
+    # The assert()method
+    assert( 'ansible' in test_list), 'Ansible is not in the list'
+	
+    # A try and except block: used to catch and handle exceptions.
+    # The code block that follows the 'try' statement executes as normal.
     try:
         with open('c:\\Users\\<your-username>\\Desktop\\test.txt') as f:
             thereadfile = f.read()
             print(thereadfile)
-	
+		
+		
+    # The code block that follows the 'except' statement is the program's response.
+    # Will execute this code when there is an exception.
     except FileNotFoundError as fnf_error:
         print(fnf_error)
         print('Did you check your code?')
